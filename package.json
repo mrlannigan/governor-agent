@@ -1,0 +1,27 @@
+{
+  "name": "governor-agent",
+  "version": "0.0.0",
+  "description": "Agent library to connect worker to governor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrlannigan/governor-agent.git"
+  },
+  "keywords": [
+    "process",
+    "work",
+    "queue",
+    "agent",
+    "job",
+    "worker"
+  ],
+  "author": "Julian Lannigan <julian.lannigan@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrlannigan/governor-agent/issues"
+  },
+  "homepage": "https://github.com/mrlannigan/governor-agent"
+}
