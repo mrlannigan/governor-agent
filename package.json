@@ -23,5 +23,12 @@
   "bugs": {
     "url": "https://github.com/mrlannigan/governor-agent/issues"
   },
-  "homepage": "https://github.com/mrlannigan/governor-agent"
+  "homepage": "https://github.com/mrlannigan/governor-agent",
+  "dependencies": {
+    "bluebird": "^2.8.2",
+    "hoek-boom": "^1.1.0",
+    "joi": "^5.x.x",
+    "socket.io-client": "^1.2.1",
+    "wreck": "^5.1.0"
+  }
 }
