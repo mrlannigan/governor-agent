@@ -29,6 +29,7 @@
     "hoek-boom": "^1.1.0",
     "joi": "^5.x.x",
     "lodash": "^3.0.0",
+    "measured": "^0.x.x",
     "socket.io-client": "^1.2.1",
     "wreck": "^5.1.0"
   }

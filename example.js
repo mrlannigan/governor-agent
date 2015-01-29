@@ -32,7 +32,7 @@ agent.consume({
 
         return BPromise.props({
           exchange: channel.assertExchange(exchangeName, 'topic', {durable: true}),
-          prefetch: channel.prefetch(1),
+          prefetch: channel.prefetch(4),
           queue: channel.assertQueue('ha.events.property', {autoDelete: false, durable: true})
         }).tap(function (result) {
           return channel.bindQueue(result.queue.queue, exchangeName, 'property.detail');
@@ -43,12 +43,12 @@ agent.consume({
     }
   },
 
-  //inquire: {
-  //    locking: true,
-  //    key: function (task) {
-  //        return 'somesweetnameagain-' + task.zip_code;
-  //    }
-  //},
+  inquire: {
+      locking: true,
+      key: function (task) {
+          return 'somesweetnameagain-' + (task.number > 0.5 ? 'upper' : 'lower');
+      }
+  },
 
   //inquire: function (task, governor) {
   //  // returns promise with an object representing result
@@ -71,8 +71,11 @@ agent.consume({
   //  })
   //},
 
-  worker: function (task, governor) {
+  worker: function (task) {
 
+      //console.log(task);
+      console.log('got work', task.number);
+    return BPromise.resolve().delay(10000).tap(function(){console.log('done with it')});
   }
 
 });
