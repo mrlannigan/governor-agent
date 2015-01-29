@@ -1,6 +1,6 @@
 {
   "name": "governor-agent",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Agent library to connect worker to governor",
   "main": "index.js",
   "scripts": {
