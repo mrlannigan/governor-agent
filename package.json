@@ -4,7 +4,12 @@
   "description": "Agent library to connect worker to governor",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "make test-cov",
+    "test-bamboo": "make test-bamboo",
+    "test-cov-bamboo": "make test-cov-bamboo",
+    "test-cov-html": "make test-cov-html",
+    "jshint": "make jshint",
+    "jshint-bamboo": "make jshint-bamboo"
   },
   "repository": {
     "type": "git",
@@ -32,5 +37,11 @@
     "measured": "^0.1.6",
     "socket.io-client": "^1.2.1",
     "wreck": "^5.1.0"
+  },
+  "devDependencies": {
+    "jscs": "^1.10.0",
+    "lab": "^5.2.1",
+    "should": "^4.6.3",
+    "sinon": "^1.12.2"
   }
 }
