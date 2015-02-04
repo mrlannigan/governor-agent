@@ -4,7 +4,12 @@
   "description": "Agent library to connect worker to governor",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "make test-cov",
+    "test-bamboo": "make test-bamboo",
+    "test-cov-bamboo": "make test-cov-bamboo",
+    "test-cov-html": "make test-cov-html",
+    "jshint": "make jshint",
+    "jshint-bamboo": "make jshint-bamboo"
   },
   "repository": {
     "type": "git",
@@ -26,11 +31,21 @@
   "homepage": "https://github.com/mrlannigan/governor-agent",
   "dependencies": {
     "bluebird": "^2.8.2",
+    "elasticsearch": "^3.1.3",
     "hoek-boom": "^1.1.0",
     "joi": "^5.x.x",
     "lodash": "^3.0.0",
     "measured": "^0.1.6",
     "socket.io-client": "^1.2.1",
-    "wreck": "^5.1.0"
+    "svc-loco-forecasting": "git+ssh://git@github.dominionenterprises.com:Homes/svc-loco-forecasting.git#master",
+    "wreck": "^5.1.0",
+    "web-config": "git+ssh://git@github.dominionenterprises.com:Homes/web-config#master",
+    "web-datafactory": "git+ssh://git@github.dominionenterprises.com:Homes/web-datafactory.git#master"
+  },
+  "devDependencies": {
+    "jscs": "^1.10.0",
+    "lab": "^5.2.1",
+    "should": "^4.6.3",
+    "sinon": "^1.12.2"
   }
 }
