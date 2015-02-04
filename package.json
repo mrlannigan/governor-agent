@@ -31,16 +31,12 @@
   "homepage": "https://github.com/mrlannigan/governor-agent",
   "dependencies": {
     "bluebird": "^2.8.2",
-    "elasticsearch": "^3.1.3",
     "hoek-boom": "^1.1.0",
     "joi": "^5.x.x",
     "lodash": "^3.0.0",
     "measured": "^0.1.6",
     "socket.io-client": "^1.2.1",
-    "svc-loco-forecasting": "git+ssh://git@github.dominionenterprises.com:Homes/svc-loco-forecasting.git#master",
-    "wreck": "^5.1.0",
-    "web-config": "git+ssh://git@github.dominionenterprises.com:Homes/web-config#master",
-    "web-datafactory": "git+ssh://git@github.dominionenterprises.com:Homes/web-datafactory.git#master"
+    "wreck": "^5.1.0"
   },
   "devDependencies": {
     "jscs": "^1.10.0",
