@@ -73,6 +73,8 @@ agent.consume({
 
   worker: function (task) {
 
+      return BPromise.reject().delay(50);
+
       //console.log(task);
       console.log('got work', task.number);
     return BPromise.resolve().delay(10000).tap(function(){console.log('done with it')});
