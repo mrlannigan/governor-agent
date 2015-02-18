@@ -32,7 +32,7 @@ agent.consume({
 
         return BPromise.props({
           exchange: channel.assertExchange(exchangeName, 'topic', {durable: true}),
-          prefetch: channel.prefetch(4),
+          prefetch: channel.prefetch(1),
           queue: channel.assertQueue('ha.events.property', {autoDelete: false, durable: true})
         }).tap(function (result) {
           return channel.bindQueue(result.queue.queue, exchangeName, 'property.detail');
@@ -72,9 +72,6 @@ agent.consume({
   //},
 
   worker: function (task) {
-
-      return BPromise.reject().delay(50);
-
       //console.log(task);
       console.log('got work', task.number);
     return BPromise.resolve().delay(10000).tap(function(){console.log('done with it')});
